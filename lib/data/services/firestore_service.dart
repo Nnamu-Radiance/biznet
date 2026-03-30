@@ -85,14 +85,6 @@ class FirestoreService {
     });
   }
 
-  // Get all businesses as a Future
-  Future<List<BusinessModel>> getAllBusinesses() async {
-    QuerySnapshot snapshot = await _db.collection('businesses').get();
-    return snapshot.docs
-        .map((doc) => BusinessModel.fromMap(doc.data() as Map<String, dynamic>))
-        .toList();
-  }
-
   // Get business by owner ID
   Future<BusinessModel?> getBusinessByOwnerId(String ownerId) async {
     QuerySnapshot snapshot = await _db
@@ -185,17 +177,14 @@ class FirestoreService {
     if (businessIds.isEmpty) return [];
 
     // Fetch the business documents for those IDs.
-    // Note: Firestore 'in' queries are limited to 10 items. We will take the first 10 for now.
-    final limitedIds = businessIds.take(10).toList();
-
-    QuerySnapshot businessesSnapshot = await _db
-        .collection('businesses')
-        .where('id', whereIn: limitedIds)
-        .get();
-
-    return businessesSnapshot.docs
-        .map((doc) => BusinessModel.fromMap(doc.data() as Map<String, dynamic>))
-        .toList();
+    List<BusinessModel> businesses = [];
+    for (String id in businessIds) {
+      BusinessModel? business = await getBusinessById(id);
+      if (business != null) {
+        businesses.add(business);
+      }
+    }
+    return businesses;
   }
 
   // --- REVIEWS ---
@@ -209,7 +198,7 @@ class FirestoreService {
         .snapshots()
         .map((snapshot) {
       return snapshot.docs
-          .map((doc) => ReviewModel.fromMap(doc.data() as Map<String, dynamic>))
+          .map((doc) => ReviewModel.fromMap(doc.data()))
           .toList();
     });
   }
@@ -223,7 +212,7 @@ class FirestoreService {
         .snapshots()
         .map((snapshot) {
       return snapshot.docs
-          .map((doc) => ReviewModel.fromMap(doc.data() as Map<String, dynamic>))
+          .map((doc) => ReviewModel.fromMap(doc.data()))
           .toList();
     });
   }
@@ -256,7 +245,7 @@ class FirestoreService {
         .snapshots()
         .map((snapshot) {
       return snapshot.docs
-          .map((doc) => ProductModel.fromMap(doc.data() as Map<String, dynamic>))
+          .map((doc) => ProductModel.fromMap(doc.data()))
           .toList();
     });
   }

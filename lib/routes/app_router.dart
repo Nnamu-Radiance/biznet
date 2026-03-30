@@ -6,6 +6,8 @@ import 'package:biznet/features/auth/presentation/screens/signup_screen.dart';
 import 'package:biznet/features/auth/presentation/screens/verify_email_screen.dart';
 import 'package:biznet/features/home/presentation/screens/home_screen.dart';
 import 'package:biznet/features/home/presentation/screens/search_screen.dart';
+import 'package:biznet/features/home/presentation/screens/category_screen.dart';
+import 'package:biznet/features/home/presentation/screens/all_businesses_screen.dart';
 import 'package:biznet/features/home/presentation/screens/write_review_screen.dart';
 import 'package:biznet/features/home/presentation/screens/business_profile_screen.dart';
 import 'package:biznet/features/home/presentation/screens/main_screen.dart';
@@ -86,6 +88,22 @@ class AppRouter {
 
                 return SearchScreen(initialCategory: categoryId);
               },
+            ),
+            GoRoute(
+              path: '/category/:id',
+              builder: (context, state) {
+                final categoryId = state.pathParameters['id']!;
+                final uri = Uri.parse(state.matchedLocation);
+                final categoryName = uri.queryParameters['name'] ?? 'Category';
+                return CategoryScreen(
+                  categoryId: categoryId,
+                  categoryName: categoryName,
+                );
+              },
+            ),
+            GoRoute(
+              path: '/all-businesses',
+              builder: (context, state) => const AllBusinessesScreen(),
             ),
             GoRoute(
               path: '/profile',

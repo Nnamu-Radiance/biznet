@@ -8,12 +8,14 @@ class HomeProvider with ChangeNotifier {
   final FirestoreService _firestoreService = FirestoreService();
 
   List<BusinessModel> _featuredBusinesses = [];
+  List<BusinessModel> _allBusinesses = [];
   List<CategoryModel> _categories = [];
   List<ReviewModel> _recentReviews = [];
   bool _isLoading = false;
   String? _error;
 
   List<BusinessModel> get featuredBusinesses => _featuredBusinesses;
+  List<BusinessModel> get allBusinesses => _allBusinesses;
   List<CategoryModel> get categories => _categories;
   List<ReviewModel> get recentReviews => _recentReviews;
   bool get isLoading => _isLoading;
@@ -41,6 +43,8 @@ class HomeProvider with ChangeNotifier {
         } else {
           print('HomeProvider: Businesses collection is EMPTY');
         }
+
+        _allBusinesses = List.from(businesses);
 
         // Sort by trustScore descending for "featured"
         businesses.sort((a, b) => b.trustScore.compareTo(a.trustScore));

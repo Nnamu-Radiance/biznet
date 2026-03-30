@@ -5,28 +5,31 @@ import 'package:go_router/go_router.dart';
 import '../../../../providers/search_provider.dart';
 import '../widgets/business_card.dart';
 
-class SearchScreen extends StatefulWidget {
-  final String? initialCategory;
+class CategoryScreen extends StatefulWidget {
+  final String categoryId;
+  final String categoryName;
 
-  const SearchScreen({Key? key, this.initialCategory}) : super(key: key);
+  const CategoryScreen({
+    Key? key,
+    required this.categoryId,
+    required this.categoryName,
+  }) : super(key: key);
 
   @override
-  _SearchScreenState createState() => _SearchScreenState();
+  _CategoryScreenState createState() => _CategoryScreenState();
 }
 
-class _SearchScreenState extends State<SearchScreen> {
+class _CategoryScreenState extends State<CategoryScreen> {
   final TextEditingController _searchController = TextEditingController();
+  String _localSearchQuery = '';
 
   @override
   void initState() {
     super.initState();
-    if (widget.initialCategory != null && widget.initialCategory!.isNotEmpty) {
-      WidgetsBinding.instance.addPostFrameCallback((_) {
-        Provider.of<SearchProvider>(context, listen: false)
-            .searchByCategory(widget.initialCategory!);
-        _searchController.text = 'Category: ${widget.initialCategory}';
-      });
-    }
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      Provider.of<SearchProvider>(context, listen: false)
+          .searchByCategory(widget.categoryId);
+    });
   }
 
   @override
@@ -40,17 +43,23 @@ class _SearchScreenState extends State<SearchScreen> {
     final searchProvider = Provider.of<SearchProvider>(context);
     final theme = Theme.of(context);
 
+    // Filter results locally by the search query
+    final results = searchProvider.searchResults.where((business) {
+      if (_localSearchQuery.isEmpty) return true;
+      return business.name.toLowerCase().contains(_localSearchQuery.toLowerCase());
+    }).toList();
+
     return Scaffold(
       backgroundColor: theme.scaffoldBackgroundColor,
       appBar: AppBar(
-        title: const Text('Search'),
+        title: Text(widget.categoryName),
         backgroundColor: theme.appBarTheme.backgroundColor ?? theme.scaffoldBackgroundColor,
         foregroundColor: theme.appBarTheme.foregroundColor ?? theme.colorScheme.onSurface,
         elevation: theme.appBarTheme.elevation ?? 0,
       ),
       body: Column(
         children: [
-          // Search Bar
+          // Search Bar for this category
           Padding(
             padding: const EdgeInsets.all(24.0),
             child: Container(
@@ -69,19 +78,21 @@ class _SearchScreenState extends State<SearchScreen> {
               child: TextField(
                 controller: _searchController,
                 onChanged: (value) {
-                  if (value.length >= 3) {
-                    searchProvider.search(value);
-                  }
+                  setState(() {
+                    _localSearchQuery = value;
+                  });
                 },
                 decoration: InputDecoration(
-                  hintText: 'Search for businesses...',
+                  hintText: 'Search in ${widget.categoryName}...',
                   prefixIcon: const Icon(LucideIcons.search, color: Colors.grey),
                   suffixIcon: _searchController.text.isNotEmpty
                       ? IconButton(
                           icon: const Icon(LucideIcons.x, size: 18),
                           onPressed: () {
                             _searchController.clear();
-                            searchProvider.clearSearch();
+                            setState(() {
+                              _localSearchQuery = '';
+                            });
                           },
                         )
                       : null,
@@ -94,7 +105,7 @@ class _SearchScreenState extends State<SearchScreen> {
           Expanded(
             child: searchProvider.isLoading
                 ? const Center(child: CircularProgressIndicator())
-                : searchProvider.searchResults.isEmpty
+                : results.isEmpty
                     ? Center(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -102,9 +113,9 @@ class _SearchScreenState extends State<SearchScreen> {
                             Icon(LucideIcons.search, size: 64, color: Colors.grey[300]),
                             const SizedBox(height: 16),
                             Text(
-                              searchProvider.query.isEmpty
-                                  ? 'Search for your favorite beauty spot'
-                                  : 'No results found for "${searchProvider.query}"',
+                              _localSearchQuery.isEmpty
+                                  ? 'No businesses found in this category'
+                                  : 'No results for "$_localSearchQuery"',
                               style: TextStyle(color: Colors.grey[500]),
                             ),
                           ],
@@ -112,9 +123,9 @@ class _SearchScreenState extends State<SearchScreen> {
                       )
                     : ListView.builder(
                         padding: const EdgeInsets.symmetric(horizontal: 24),
-                        itemCount: searchProvider.searchResults.length,
+                        itemCount: results.length,
                         itemBuilder: (context, index) {
-                          final business = searchProvider.searchResults[index];
+                          final business = results[index];
                           return Padding(
                             padding: const EdgeInsets.only(bottom: 16),
                             child: BusinessCard(

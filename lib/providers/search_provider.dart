@@ -19,11 +19,7 @@ class SearchProvider with ChangeNotifier {
     notifyListeners();
 
     try {
-      if (query.isEmpty) {
-        _searchResults = await _firestoreService.getAllBusinesses();
-      } else {
-        _searchResults = await _firestoreService.searchBusinesses(query);
-      }
+      _searchResults = await _firestoreService.searchBusinesses(query);
     } catch (e) {
       print('Search error: $e');
       _searchResults = [];
@@ -40,6 +36,10 @@ class SearchProvider with ChangeNotifier {
 
     try {
       _searchResults = await _firestoreService.getBusinessesByCategory(categoryId);
+      // Remove any duplicate businesses just in case
+      final ids = <String>{};
+      _searchResults.retainWhere((b) => ids.add(b.id));
+
     } catch (e) {
       print('Category Search error: $e');
       _searchResults = [];
@@ -49,26 +49,9 @@ class SearchProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  Future<void> loadAllBusinesses() async {
-    if (_query.isNotEmpty) return; // don't override if already searching
-
-    _isLoading = true;
-    notifyListeners();
-
-    try {
-      _searchResults = await _firestoreService.getAllBusinesses();
-    } catch (e) {
-      print('Load all businesses error: $e');
-      _searchResults = [];
-    }
-
-    _isLoading = false;
-    notifyListeners();
-  }
-
   void clearSearch() {
     _query = '';
+    _searchResults = [];
     notifyListeners();
-    loadAllBusinesses();
   }
 }

@@ -25,7 +25,7 @@ class BusinessCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.05),
+              color: Colors.black.withValues(alpha: 0.05),
               blurRadius: 10,
               offset: const Offset(0, 4),
             ),
@@ -69,9 +69,10 @@ class BusinessCard extends StatelessWidget {
                       Expanded(
                         child: Text(
                           business.name,
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
+                            color: Theme.of(context).colorScheme.onSurface,
                           ),
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
@@ -81,7 +82,7 @@ class BusinessCard extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                         decoration: BoxDecoration(
                           color: Theme.of(context).brightness == Brightness.dark
-                              ? Colors.amber.withOpacity(0.12)
+                              ? Colors.amber.withValues(alpha: 0.12)
                               : const Color.fromRGBO(255, 193, 7, 0.1),
                           borderRadius: BorderRadius.circular(8),
                         ),
@@ -107,7 +108,8 @@ class BusinessCard extends StatelessWidget {
                     business.description ?? 'No description available',
                     style: TextStyle(
                       fontSize: 14,
-                      color: Theme.of(context).textTheme.bodyMedium?.color?.withOpacity(0.8),
+                      color: Theme.of(context).textTheme.bodyMedium?.color?.withValues(alpha: 0.8) ??
+                             Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.8),
                     ),
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,

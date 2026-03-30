@@ -136,7 +136,7 @@ class HomeScreen extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
+                              const Text(
                                 'Business Dashboard',
                                 style: TextStyle(
                                   color: Colors.white,
@@ -186,6 +186,7 @@ class HomeScreen extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
+                      color: Theme.of(context).colorScheme.onSurface,
                     ),
                   ),
                 ),
@@ -202,8 +203,8 @@ class HomeScreen extends StatelessWidget {
                             final category = homeProvider.categories[index];
                             return GestureDetector(
                               onTap: () {
-                                // Navigate to search screen with the selected category ID
-                                context.push('/search?category=${category.id}');
+                                // Navigate to category screen with the selected category ID and name
+                                context.push(Uri(path: '/category/${category.id}', queryParameters: {'name': category.name}).toString());
                               },
                               child: Padding(
                                 padding: const EdgeInsets.only(right: 16),
@@ -212,19 +213,19 @@ class HomeScreen extends StatelessWidget {
                                     Container(
                                       padding: const EdgeInsets.all(16),
                                       decoration: BoxDecoration(
-                                        color: const Color(0xFF1E2E4F).withValues(alpha: 0.1),
+                                        color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
                                         borderRadius: BorderRadius.circular(16),
                                       ),
-                                      child: const Icon(
+                                      child: Icon(
                                         LucideIcons.sparkles,
-                                        color: Color(0xFF1E2E4F),
+                                        color: Theme.of(context).colorScheme.primary,
                                       ),
                                     ),
                                     const SizedBox(height: 8),
                                     Text(
                                       category.name,
-                                      style: const TextStyle(
-                                        color: Color.fromRGBO(30, 46, 79, 0.1),
+                                      style: TextStyle(
+                                        color: Theme.of(context).colorScheme.onSurface,
                                         fontWeight: FontWeight.w500,
                                       ),
                                     ),
@@ -243,20 +244,21 @@ class HomeScreen extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
+                      Text(
                         'Featured Businesses',
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
+                          color: Theme.of(context).colorScheme.onSurface,
                         ),
                       ),
                       TextButton(
                         onPressed: () {
-                          context.push('/search');
+                          context.push('/all-businesses');
                         },
-                        child: const Text(
+                        child: Text(
                           'See All',
-                          style: TextStyle(color: Color(0xFF1E2E4F)),
+                          style: TextStyle(color: Theme.of(context).colorScheme.primary),
                         ),
                       ),
                     ],
@@ -268,7 +270,7 @@ class HomeScreen extends StatelessWidget {
                   child: homeProvider.isLoading
                       ? const Center(child: CircularProgressIndicator())
                       : homeProvider.featuredBusinesses.isEmpty
-                          ? Center(
+                          ? const Center(
                               child: Text(
                                 'No businesses found yet.',
                                 style: TextStyle(color: Colors.grey),
@@ -291,9 +293,6 @@ class HomeScreen extends StatelessWidget {
                             ),
                 ),
                 const SizedBox(height: 32),
-
-                // Recent Reviews
-
               ],
             ),
           ),
