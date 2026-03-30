@@ -1,0 +1,21 @@
+id,ownerId,name,description,logoUrl,ecommerceLink,trustScore,createdAt,updatedAt
+biz_1,owner_1,Glow Beauty Studio,Premium skincare and facial treatments.,https://picsum.photos/seed/glow/200/200,https://example.com/glow,4.8,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+biz_2,owner_2,Pure Hair Care,Organic hair treatments and styling.,https://picsum.photos/seed/hair/200/200,https://example.com/pure,4.5,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+biz_3,owner_3,Velvet Makeup Artistry,Professional makeup services for all occasions.,https://picsum.photos/seed/makeup/200/200,https://example.com/velvet,4.9,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+biz_4,owner_4,Ocean Breeze Spa,Relaxing massage and holistic wellness.,https://picsum.photos/seed/spa/200/200,https://example.com/ocean,4.7,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+biz_5,owner_5,Urban Grooming Co.,Modern barbering and mens skincare.,https://picsum.photos/seed/groom/200/200,https://example.com/urban,4.6,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+biz_6,owner_6,Flora Fragrances,Exotic and natural perfumes.,https://picsum.photos/seed/scent/200/200,https://example.com/flora,4.4,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+biz_7,owner_7,Ivory Nail Lounge,Artistic nail design and care.,https://picsum.photos/seed/nails/200/200,https://example.com/ivory,4.8,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+biz_8,owner_8,Green Leaf Organics,Eco-friendly beauty products.,https://picsum.photos/seed/leaf/200/200,https://example.com/green,4.9,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+biz_9,owner_9,Solar Sun Care,Specialized sun protection and care.,https://picsum.photos/seed/sun/200/200,https://example.com/solar,4.3,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+biz_10,owner_10,Pro Salon Supplies,Professional grade beauty tools.,https://picsum.photos/seed/pro/200/200,https://example.com/pro,4.7,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+biz_11,owner_1,Radiant Skin Clinic,Advanced dermatological treatments.,https://picsum.photos/seed/radiant/200/200,https://example.com/radiant,4.9,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+biz_12,owner_2,Silky Strands,Luxury hair extensions and care.,https://picsum.photos/seed/silky/200/200,https://example.com/silky,4.6,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+biz_13,owner_3,Glamour Eyes,Lash and brow enhancement studio.,https://picsum.photos/seed/glam/200/200,https://example.com/glam,4.8,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+biz_14,owner_4,Zen Garden Spa,Traditional Asian wellness therapies.,https://picsum.photos/seed/zen/200/200,https://example.com/zen,4.7,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+biz_15,owner_5,Sharp Edge Barbers,Classic barbering with a modern twist.,https://picsum.photos/seed/sharp/200/200,https://example.com/sharp,4.5,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+biz_16,owner_6,Mystic Scents,Handcrafted artisanal fragrances.,https://picsum.photos/seed/mystic/200/200,https://example.com/mystic,4.4,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+biz_17,owner_7,Polished Perfection,Manicures and pedicures for all.,https://picsum.photos/seed/polished/200/200,https://example.com/polished,4.8,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+biz_18,owner_8,Nature's Touch,Herbal beauty and wellness.,https://picsum.photos/seed/nature/200/200,https://example.com/nature,4.9,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+biz_19,owner_9,Beach Glow,Tanning and summer beauty.,https://picsum.photos/seed/beach/200/200,https://example.com/beach,4.2,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+biz_20,owner_10,Elite Beauty Tools,High-end salon equipment.,https://picsum.photos/seed/elite/200/200,https://example.com/elite,4.7,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z

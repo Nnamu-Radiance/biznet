@@ -1,0 +1,21 @@
+id,businessId,userId,userName,rating,text,imageUrl,videoLink,createdAt,updatedAt
+rev_1,biz_1,customer_1,Alice Smith,5,Amazing service and products! My skin has never looked better.,null,null,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+rev_2,biz_1,customer_2,Bob Johnson,4,Great experience but the serum was a bit pricey.,null,null,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+rev_3,biz_2,customer_3,Charlie Brown,5,The argan oil shampoo is a game changer for my hair!,null,null,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+rev_4,biz_2,customer_4,Diana Prince,4,Very professional service and great hair care products.,null,null,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+rev_5,biz_3,customer_5,Ethan Hunt,5,Elena is a true artist. My makeup for the event was perfect.,null,null,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+rev_6,biz_3,customer_6,Fiona Apple,4,Great makeup products but the studio was a bit hard to find.,null,null,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+rev_7,biz_4,customer_7,George Lucas,5,The most relaxing massage I have ever had. Highly recommend.,null,null,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+rev_8,biz_4,customer_8,Hannah Montana,4,Beautiful spa environment and very friendly staff.,null,null,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+rev_9,biz_5,customer_9,Ian Wright,5,Urban Grooming is the best place for a haircut in town.,null,null,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+rev_10,biz_5,customer_10,Jenny Fromtheblock,4,Great service for men. My husband loved his new look.,null,null,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+rev_11,biz_6,customer_1,Alice Smith,5,Flora Fragrances has the most unique scents I have ever found.,null,null,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+rev_12,biz_6,customer_2,Bob Johnson,4,High quality perfumes but they are a bit expensive.,null,null,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+rev_13,biz_7,customer_3,Charlie Brown,5,Ivory Nail Lounge is my go-to for nail art. Always perfect.,null,null,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+rev_14,biz_7,customer_4,Diana Prince,4,Great nail care and very clean studio.,null,null,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+rev_15,biz_8,customer_5,Ethan Hunt,5,Love the organic products from Green Leaf. Very gentle on skin.,null,null,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+rev_16,biz_8,customer_6,Fiona Apple,4,Great natural beauty options and eco-friendly packaging.,null,null,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+rev_17,biz_9,customer_7,George Lucas,5,Solar Sun Care has the best sunscreens for sensitive skin.,null,null,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+rev_18,biz_9,customer_8,Hannah Montana,4,Very effective sun protection products.,null,null,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+rev_19,biz_10,customer_9,Ian Wright,5,Pro Salon Supplies has everything a professional needs.,null,null,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+rev_20,biz_10,customer_10,Jenny Fromtheblock,4,High quality tools and very helpful staff.,null,null,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z

@@ -1,0 +1,5 @@
+uid,email,name,role,createdAt,updatedAt
+owner_1,glow@beauty.com,Sarah Glow,business,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+owner_2,pure@hair.com,John Pure,business,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+customer_1,alice@example.com,Alice Smith,customer,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+customer_2,bob@example.com,Bob Johnson,customer,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z

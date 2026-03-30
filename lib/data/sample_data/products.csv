@@ -1,0 +1,21 @@
+id,businessId,categoryId,name,description,price,imageUrl,createdAt,updatedAt
+prod_1,biz_1,skincare,Radiance Serum,Vitamin C serum for glowing skin.,45.0,https://picsum.photos/seed/serum/300/300,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+prod_2,biz_1,skincare,Hydrating Mask,Deep hydration for dry skin.,25.0,https://picsum.photos/seed/mask/300/300,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+prod_3,biz_2,haircare,Argan Oil Shampoo,Nourishing shampoo with pure argan oil.,18.0,https://picsum.photos/seed/shampoo/300/300,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+prod_4,biz_2,haircare,Silk Conditioner,Smoothing conditioner for all hair types.,20.0,https://picsum.photos/seed/conditioner/300/300,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+prod_5,biz_3,makeup,Velvet Lipstick,Long-lasting matte finish lipstick.,22.0,https://picsum.photos/seed/lipstick/300/300,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+prod_6,biz_3,makeup,Glow Foundation,Lightweight foundation for a natural look.,35.0,https://picsum.photos/seed/foundation/300/300,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+prod_7,biz_4,spa,Lavender Bath Salts,Relaxing salts for a soothing soak.,15.0,https://picsum.photos/seed/salts/300/300,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+prod_8,biz_4,spa,Eucalyptus Oil,Pure essential oil for aromatherapy.,12.0,https://picsum.photos/seed/oil/300/300,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+prod_9,biz_5,mens_grooming,Beard Balm,Nourishing balm for a healthy beard.,18.0,https://picsum.photos/seed/beard/300/300,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+prod_10,biz_5,mens_grooming,Charcoal Face Wash,Deep cleaning wash for mens skin.,14.0,https://picsum.photos/seed/facewash/300/300,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+prod_11,biz_6,fragrance,Midnight Rose Perfume,Elegant floral scent for evening wear.,65.0,https://picsum.photos/seed/perfume/300/300,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+prod_12,biz_6,fragrance,Citrus Zest Cologne,Fresh and energizing daily scent.,55.0,https://picsum.photos/seed/cologne/300/300,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+prod_13,biz_7,nails,Ruby Red Polish,Classic red nail polish with high shine.,10.0,https://picsum.photos/seed/nailpolish/300/300,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+prod_14,biz_7,nails,Nail Care Kit,Essential tools for perfect nails.,25.0,https://picsum.photos/seed/nailkit/300/300,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+prod_15,biz_8,organic,Aloe Vera Gel,Pure organic aloe for skin relief.,12.0,https://picsum.photos/seed/aloe/300/300,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+prod_16,biz_8,organic,Green Tea Scrub,Exfoliating scrub with natural tea.,18.0,https://picsum.photos/seed/scrub/300/300,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+prod_17,biz_9,sun_care,SPF 50 Sunscreen,High protection for all skin types.,22.0,https://picsum.photos/seed/sunscreen/300/300,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+prod_18,biz_9,sun_care,After Sun Lotion,Cooling lotion for sun-exposed skin.,15.0,https://picsum.photos/seed/aftersun/300/300,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+prod_19,biz_10,tools,Professional Brush Set,High-quality brushes for makeup artists.,45.0,https://picsum.photos/seed/brushes/300/300,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z
+prod_20,biz_10,tools,Facial Roller,Jade roller for skin rejuvenation.,20.0,https://picsum.photos/seed/roller/300/300,2026-03-28T12:00:00Z,2026-03-28T12:00:00Z

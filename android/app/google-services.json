@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "187359709525",
+    "project_id": "biznet-byct",
+    "storage_bucket": "biznet-byct.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187359709525:android:b385dbe87d063f074387dc",
+        "android_client_info": {
+          "package_name": "com.example.biznet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "187359709525-ha98ips55d27ipkq1okjl7l35gk1phsj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.biznet",
+            "certificate_hash": "04c5716ea33a4cf9ce7ac77377f34fdc9abbf6d8"
+          }
+        },
+        {
+          "client_id": "187359709525-kqvjgs709gacb7d7tcjq3229bs0cksc2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAInerZkrH1_iSw6WWiJuqbVwpL6I9M1g8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "187359709525-kqvjgs709gacb7d7tcjq3229bs0cksc2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "187359709525-vnh9n2avk5em1cj45s7joi7m9sjurmrg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.biznet"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
