@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:lucide_icons/lucide_icons.dart';
 import 'package:go_router/go_router.dart';
 import 'package:form_validator/form_validator.dart';
-import 'package:lucide_icons/lucide_icons.dart';
 import '../../../../providers/auth_provider.dart';
+import '../../../../core/widgets/auth_text_field.dart';
 import '../../../../core/widgets/pretty_neumorphic_button.dart';
-import '../widgets/auth_text_field.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);

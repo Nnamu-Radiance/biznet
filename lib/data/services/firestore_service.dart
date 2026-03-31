@@ -142,14 +142,16 @@ class FirestoreService {
     // Simple case-insensitive search (Firestore doesn't support this natively well,
     // so we'll do a simple prefix search or filter client-side if needed,
     // but for now, let's try a basic query)
-    QuerySnapshot snapshot = await _db
-        .collection('businesses')
-        .where('name', isGreaterThanOrEqualTo: query)
-        .where('name', isLessThanOrEqualTo: query + '\uf8ff')
-        .get();
+    final lowerCaseQuery = query.toLowerCase();
+
+    // Fetch all businesses (in a real app with large data, you would use Algolia or Typesense)
+    QuerySnapshot snapshot = await _db.collection('businesses').get();
 
     return snapshot.docs
         .map((doc) => BusinessModel.fromMap(doc.data() as Map<String, dynamic>))
+        .where((business) =>
+            business.name.toLowerCase().contains(lowerCaseQuery) ||
+            (business.description?.toLowerCase().contains(lowerCaseQuery) ?? false))
         .toList();
   }
 
