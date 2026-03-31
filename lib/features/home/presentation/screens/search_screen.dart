@@ -68,13 +68,17 @@ class _SearchScreenState extends State<SearchScreen> {
               ),
               child: TextField(
                 controller: _searchController,
+                style: TextStyle(color: theme.colorScheme.onSurface),
                 onChanged: (value) {
                   if (value.length >= 3) {
                     searchProvider.search(value);
+                  } else if (value.isEmpty) {
+                    searchProvider.clearSearch();
                   }
                 },
                 decoration: InputDecoration(
                   hintText: 'Search for businesses...',
+                  hintStyle: TextStyle(color: theme.colorScheme.onSurface.withValues(alpha: 0.5)),
                   prefixIcon: const Icon(LucideIcons.search, color: Colors.grey),
                   suffixIcon: _searchController.text.isNotEmpty
                       ? IconButton(

@@ -108,7 +108,7 @@ class BusinessCard extends StatelessWidget {
                     business.description ?? 'No description available',
                     style: TextStyle(
                       fontSize: 14,
-                      color: Theme.of(context).textTheme.bodyMedium?.color?.withValues(alpha: 0.8) ??
+                      color: Theme.of(context).textTheme.bodyMedium?.color?.withValues(alpha: 0.8) ?? 
                              Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.8),
                     ),
                     maxLines: 2,

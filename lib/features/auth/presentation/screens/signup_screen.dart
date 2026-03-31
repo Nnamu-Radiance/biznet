@@ -5,7 +5,8 @@ import 'package:form_validator/form_validator.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import '../../../../providers/auth_provider.dart';
 import '../../../../core/widgets/pretty_neumorphic_button.dart';
-import '../widgets/auth_text_field.dart';
+import '../../../../core/widgets/auth_text_field.dart';
+
 class SignupScreen extends StatefulWidget {
   const SignupScreen({Key? key}) : super(key: key);
 
