@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../providers/home_provider.dart';
-import '../widgets/business_card.dart';
+import '../../../../core/widgets/business_card.dart';
 
 class AllBusinessesScreen extends StatefulWidget {
   const AllBusinessesScreen({Key? key}) : super(key: key);
